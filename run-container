@@ -118,6 +118,8 @@ start_new_container() {
 	  --network "${network_name}" --network-alias "[${container_name}]" \
 	  --platform $platform \
 	  --privileged --security-opt seccomp=unconfined \
+	  -v "$maindir/home":/home/alice \
+          -w "/home/alice" \
 	  $netarg "${image_name}:${tag}"
 }
 
