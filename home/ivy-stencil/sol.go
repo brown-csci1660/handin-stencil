@@ -42,7 +42,7 @@ func performAttack(oracle encryptionOracle, firstIv [2]byte, firstCiphertext []b
 	// Given m, get the next IV, ciphertext pair from the oracle (ie, the simulated router)
 	m := hexStringToBytes("0000000000000000")
 	iv, c := oracle(m)
-	fmt.Printf("Got IV:  %x, First c:  %x\n", iv, c) // TODO:  REMOVE BEFORE SUBMITTING
+	fmt.Printf("Got IV:  %x, Ciphertext:  %x\n", iv, c) // TODO:  REMOVE BEFORE SUBMITTING
 
 	// When done, return the key as an array of 8 bytes
 	key := make([]byte, 8)
