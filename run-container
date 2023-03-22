@@ -78,7 +78,7 @@ start_container() {
     echo "Entering existing container"
     echo "(To reset this container on startup, run with --clean)"
     docker start $container_name
-    docker exec -it $container_name /bin/bash
+    docker exec -it $container_name /usr/local/bin/container-entrypoint /bin/bash
 }
 
 has_network() {
