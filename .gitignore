@@ -6,9 +6,10 @@
 
 .DS_Store
 
-# Ignore dotfiles in home directory (eg /home/alice/.cache)
+# Ignore dotfiles in home directory (eg. /home/alice/.cache) and compiled go code
 # If any of these pertain to your exploits, feel free to forcibly add with -f
 home/\.*
+home/go
 
 # Don't include compiled solution binary
 home/ivy-stencil/sol
