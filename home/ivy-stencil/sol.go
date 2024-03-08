@@ -17,7 +17,7 @@ func checkError(err error, msg string) {
 
 // Helper to build arrays of bytes from hex strings
 // (like those that you type when interacting with the
-// router binary)
+// client binary)
 func hexStringToBytes(s string) []byte {
 	bytes, err := hex.DecodeString(s)
 	checkError(err, "Error decoding hex string to bytes")
@@ -39,7 +39,7 @@ func performAttack(oracle encryptionOracle, firstIv [2]byte, firstCiphertext []b
 
 	fmt.Printf("First IV:  %x, First c:  %x\n", firstIv, firstCiphertext) // TODO:  REMOVE BEFORE SUBMITTING
 
-	// Given m, get the next IV, ciphertext pair from the oracle (ie, the simulated router)
+	// Given m, get the next IV, ciphertext pair from the oracle (ie, the simulated client)
 	m := hexStringToBytes("0000000000000000")
 	iv, c := oracle(m)
 	fmt.Printf("Got IV:  %x, Ciphertext:  %x\n", iv, c) // TODO:  REMOVE BEFORE SUBMITTING
