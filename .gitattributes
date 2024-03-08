@@ -1,2 +1,6 @@
 # Force unix newlines on all platforms
-* text eol=lf
+run-container text eol=lf
+update_from_stencil text eol=lf
+home/.bashrc text eol=lf
+home/.bash_profile
+home/.profile text eol=lf
