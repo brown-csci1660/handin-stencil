@@ -42,6 +42,8 @@ func performAttack(oracle encryptionOracle, firstIv [2]byte, firstCiphertext []b
 	// Given m, get the next IV, ciphertext pair from the oracle (ie, the simulated client)
 	m := hexStringToBytes("0000000000000000")
 	iv, c := oracle(m)
+
+	_, _ = iv, c // TODO:  delete this line after starting your actual implementation (removes unused variable warning)
 	fmt.Printf("Got IV:  %x, Ciphertext:  %x\n", iv, c) // TODO:  REMOVE BEFORE SUBMITTING
 
 	// When done, return the key as an array of 8 bytes
